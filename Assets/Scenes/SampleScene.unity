@@ -1373,7 +1373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ce5417ad1dddd92bdf707f510d0d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWaypoint: {fileID: 767688776}
+  startWaypoint: {fileID: 795781908}
   endWaypoint: {fileID: 2064413849}
   isRunning: 1
 --- !u!114 &1969556328 stripped
