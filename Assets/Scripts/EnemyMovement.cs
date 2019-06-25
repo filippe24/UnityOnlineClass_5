@@ -10,14 +10,14 @@ public class EnemyMovement : MonoBehaviour
 	// Use this for initialization
 	void Start () 
     {
-        // //PrintAllWaypoints();
-        // StartCoroutine(FollowPath());
-        // print("Hey I'm back at Start");
+        Pathfinder pathfinder = FindObjectOfType<Pathfinder>();
+        var path = pathfinder.GetPath();
+        StartCoroutine(FollowPath(path));
 	}
 
 
 
-     IEnumerator FollowPath()    
+     IEnumerator FollowPath(List<Waypoint> path)
      {
 
         print("Starting patrol..."); 
@@ -25,8 +25,7 @@ public class EnemyMovement : MonoBehaviour
         {     
             print(waypoint.name);
             transform.position = waypoint.transform.position;
-            print("Visiting: " + waypoint);
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(2f);
         }
         print("Ending patrol");
     }
