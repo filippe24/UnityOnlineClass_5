@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7259906477352965621}
   - component: {fileID: 7259906477352965620}
+  - component: {fileID: 374244051}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -51,6 +52,33 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &374244051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7259906477352965622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d86decd8c03b16d7bb158550dcac1653, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionMesh: {fileID: 7261405652692385985}
+  hitPoints: 10
+--- !u!65 &7261405652692385985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7261405652692385984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 25.96199, z: 13}
+  m_Center: {x: 0, y: 1.0190048, z: 0}
 --- !u!1001 &7259906475670000110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -120,6 +148,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0dc657ece5d6f514297eb54082bc243b, type: 3}
+--- !u!1 &7261405652692385984 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1670769832628526, guid: 0dc657ece5d6f514297eb54082bc243b,
+    type: 3}
+  m_PrefabInstance: {fileID: 7259906475670000110}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7263885832503464222 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4186752768196848, guid: 0dc657ece5d6f514297eb54082bc243b,
