@@ -9,6 +9,8 @@ public class Waypoint : MonoBehaviour
     const int gridSize = 10;
     public bool isExplored = false;
     public Waypoint exploredFrom;
+
+    public bool isPlaceable = true;
     public int GetGridSize()
     {
         return gridSize;
@@ -16,10 +18,19 @@ public class Waypoint : MonoBehaviour
 
 
 
-    public void SetTopColor(Color color)
+    void OnMouseOver()
     {
-        MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
-        topMeshRenderer.material.color = color;
+        if (Input.GetMouseButtonDown(0)) // left click
+        {
+            if (isPlaceable)
+            {
+                print(gameObject.name + " tower placement");
+            }
+            else
+            {
+                print("Can't place here");
+            }
+        }     
     }
 
     public Vector2Int GetGridPos()
