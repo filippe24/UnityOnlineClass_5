@@ -11,6 +11,8 @@ public class Waypoint : MonoBehaviour
     public Waypoint exploredFrom;
 
     public bool isPlaceable = true;
+
+    const string towerParentName = "Towers";
     public int GetGridSize()
     {
         return gridSize;
@@ -24,7 +26,7 @@ public class Waypoint : MonoBehaviour
         {
             if (isPlaceable)
             {
-                print(gameObject.name + " tower placement");
+                 FindObjectOfType<TowerFactory>().AddTower(this);
             }
             else
             {

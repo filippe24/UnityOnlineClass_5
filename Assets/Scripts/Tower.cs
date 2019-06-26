@@ -27,7 +27,7 @@ public class Tower : MonoBehaviour
         SetTargetEnemy();
        if (targetEnemy)
         {
-            objectToPan.LookAt(targetEnemy);
+            objectToPan.LookAt(targetEnemy.position + Vector3.up*7);
             FireAtEnemy();
         }
         else
